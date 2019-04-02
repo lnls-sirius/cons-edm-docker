@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+  edm:
+    volumes:
+      - "$HOME/.Xauthority:/root/.Xauthority:rw"
+    network_mode: "host"
+    hostname: edm
+    environment:
+      - DISPLAY
+    container_name: edm
+    build: '.'
+    #image: lnlscon/streamdevice-ioc:v1.0.15.2.2019
